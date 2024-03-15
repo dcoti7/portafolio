@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: "Fira Code", monospace; 
+}
+a, a:link, a:visited, a:hover, a:active {
+    color: #9fb4d0;
+    text-decoration: none; /
+}
+  
+.bg_animate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: linea;
+    background: -webkit-linear-gradient(90deg, #041222,#08212a);    
+    position: relative;                                      
+}
+.flex-container{
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+    height: 90vh;
+    background: -webkit-linear-gradient(90deg, #061b33,#0f3745);  
+    border-radius: 10px;  
+    border: solid 2px rgb(48, 62, 84);
+    align-items: center;
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    width: 95%;
+    height: 7vh;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    background: transparent;  
+    border: solid 1px rgb(48, 62, 84);
+}
+.elemento{
+    cursor: pointer;
+    color: #9fb4d0;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 19%;
+    /* width: 10%; */
+    border: solid 1px rgb(48, 62, 84);
+    border-radius: 5px;
+    margin-top:5px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+.elemento:hover{
+    border:solid 1px #fea55f;
+}
+.elemento.flex-container::-webkit-scrollbar-thumb:hover{
+    border-color: #fea55f;
+}
+/* color del borde de los div */
+.active{
+    border-color: #fea55f;
+}
+
+.informacion{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.bienvenida{
+    margin-top: 10%;
+    width: 80%;
+    padding-top: 5%;
+}
+
+.bienvenida-img{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 3%;
+    width: 300px;
+    height: 300px;
+    /* width: 25%;
+    height:45vh; */
+    border-radius: 50%;
+    background-image: url(../img/2022_04_09_15_59_IMG_1950.JPG);
+    background-size: cover;
+    background-position: center;
+    background-position-y:0.5px ;
+    /* box-shadow: 10px 10px 10px #297a98; */
+    box-shadow: 1px 1px 40px #297a98;
+    
+ }
+.flex-acercaDe{
+    color: #9fb4d0;
+    padding: 11%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-acercaDe{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: #12263f;
+    border-radius: 10px;
+    width: 80%;
+}
+.div-acercaDe ul li{
+    margin-left:35px ;
+}
+.flex-proyectos{
+    color: #9fb4d0;
+    padding: 6%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-proyectos{
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    margin: 2%;
+    /* background-color:#2e4560; */
+    border-radius: 10px;
+    width: 100%;
+    height: 68vh;
+}
+
+.div-proyectos div{
+    width: 20%;
+    height: 60vh;
+    /* background-color: #12263f; */
+    background-color: #06162c;
+    border-radius: 10px;
+    transition:0.5s;
+}
+.div-proyectos div:hover{
+    width: 20.1%;
+    height: 62vh;
+    box-shadow: 1px 1px 40px #233573;
+}
+.proyectos-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-proyectos div img{
+    width: 85%;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px #5a6eb8;
+}
+.proyectos-img div:hover{
+    box-shadow: none;
+}
+
+.div-proyectos div h5{
+    font-size: 15px;
+}
+
+.div-proyectos div p{
+    margin: 10px;
+    font-size: 15px;
+    text-align: justify;
+}
+.btn-proyecto{
+    border-radius: 5px;
+    width: 60%;
+    color: #9fb4d0;
+    background-color: transparent;
+    border: solid 1px #9fb4d0;
+}
+.btn-proyecto a{
+    text-decoration: none;
+}
+
+.tecnologias{
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tecnologias div{
+    /* background-color: white; */
+    width: 8%;
+    height: 10vh;
+}
+.tecnologias div img{
+    width: 100%;
+    height: 10vh;
+}
+/* .div-proyectos div{
+    background-color: white;
+    display: flex;
+    /* flex-direction: column;
+}  */
+
+/* Cuadrados */
+.cuadrado{
+    background-color: #0b407c;
+    opacity: .3;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: cuadrados 3s linear infinite;
+}
+
+.cuadrado:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 20%;
+    animation-duration: 2s; 
+}
+.cuadrado:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 5%;
+    animation-duration: 2.5s; 
+}
+.cuadrado:nth-child(3){
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s; 
+}
+.cuadrado:nth-child(4){
+    width: 80px;
+    height: 80px;
+    left: 65%;
+    animation-duration: 4s; 
+}
+.cuadrado:nth-child(5){
+    width: 80px;
+    height: 80px;
+    left: 85%;
+    animation-duration: 4s; 
+}
+.cuadrado:nth-child(5){
+    width: 40px;
+    height: 40px;
+    left: 90%;
+    animation-duration: 3s; 
+}
+
+@keyframes cuadrados{
+    0%{
+        bottom:0;
+        opacity: 0;
+    }
+    50%{
+        opacity: .4;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .header div{
+        font-size: 8px;
+        width: 19%;
+    }
+    .bienvenida-img{
+        width: 200px;
+        height: 200px;
+        margin-top: 100px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .flex-container{
+        width: 95%;
+        height: 95vh;
+    }
+    
+    .flex-proyectos{
+        padding-top: 15%;
+    }
+    .flex-acercaDe{
+        padding-top: 15%;
+    }
+    .informacion{
+        padding-top: 20%;
+    }
+    .tecnologias div{
+        /* background-color: white; */
+        margin: 1%;
+        width: 20%;
+        height: 15vh;
+    }
+    .tecnologias{
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+   
+}
+
+@media (max-width: 1100px) {
+    .header div{
+        font-size: 10px;
+        width: 17%;
+    }
+    .div-proyectos{
+        flex-direction: column;
+        height: auto;
+    }
+    .div-proyectos div{
+        justify-content: center;
+        align-items: center;
+        margin: 2%;
+        width: 65%;
+        height: 70vh;
+    }
+    .div-proyectos div:hover{
+        width: 70.5%;
+        height: 70.5vh;
+    }
+
+}
+/* scrollbar */
+.flex-container::-webkit-scrollbar {
+    width: 7px;
+}
+
+.flex-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.flex-container::-webkit-scrollbar-thumb {
+    background: #184758;
+    border-radius: 100px;
+}
+
+.flex-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
